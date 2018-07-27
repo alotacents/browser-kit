@@ -146,7 +146,7 @@ class Cookie
             }
 
             $values['domain'] = $urlParts['host'];
-            $values['path'] = isset($urlParts['path']) ? substr($urlParts['path'], 0, strrpos($urlParts['path'], '/')) : '';
+            $values['path'] = isset($urlParts['path']) ? substr($urlParts['path'], 0, strrpos($urlParts['path'], '/')+1) : $values['path'];
         }
 
         foreach ($parts as $part) {
